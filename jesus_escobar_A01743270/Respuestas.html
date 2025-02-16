@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML y CSS - Introducción</title>
+    <style>
+        * {
+            background-color: antiquewhite;
+            font-family: 'Times New Roman';
+        }
+        body {
+            border: 10px double;
+            margin: 20px;
+            padding: 5%;
+        }
+        .tabla {
+            background-color: rgb(0, 0, 0);
+            border-radius: 10px;
+            border: solid 5px white;
+            color: rgb(0, 0, 0);
+        }
+        .preguntas {
+            background-color: aqua;
+            color: red;
+            border: solid 3px black;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="preguntas">HTML</h1>
+
+    <h2>Introducción</h2>
+    <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Se utiliza para describir la
+        estructura de las páginas web mediante el uso de etiquetas.</p>
+    <h3 class="preguntas">¿Qué es HTML?</h3>
+    <p>HTML es el lenguaje de marcado de hipertexto que se utiliza para crear páginas web. Define la estructura y el
+        contenido de las páginas web.</p>
+    <h3 class="preguntas">Explicación de las etiquetas head y body</h3>
+    <p>La etiqueta head contiene metadatos y enlaces a recursos externos, como hojas de estilo y scripts.
+        La etiqueta body contiene el contenido visible de la página web, como texto, imágenes y otros
+        elementos.</p>
+
+    <h2>Etiquetas Básicas</h2>
+    <h3 class="preguntas">Explicación de las etiquetas section, article, aside,
+        header, footer</h3>
+    <ul>
+        <li>section: Define una sección del documento.</li>
+        <li>article: Define un artículo o contenido independiente.</li>
+        <li>aside: Define contenido que está relacionado pero no es parte del contenido principal.</li>
+        <li>header: Define un encabezado para una sección o página.</li>
+        <li>footer: Define un pie de página para una sección o página.</li>
+    </ul>
+    <h3 class="preguntas">Crear una lista desordenada</h3>
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+    <h3 class="preguntas">Crear una lista ordenada</h3>
+    <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ol>
+    <h3 class="preguntas">Crear una tabla básica</h3>
+    <table class="tabla">
+        <tr>
+            <th>Columna 1</th>
+            <th>Columna 2</th>
+        </tr>
+        <tr>
+            <td>Fila 1, Celda 1</td>
+            <td>Fila 1, Celda 2</td>
+        </tr>
+        <tr>
+            <td>Fila 2, Celda 1</td>
+            <td>Fila 2, Celda 2</td>
+        </tr>
+    </table>
+
+    <h1>CSS</h1>
+
+    <h2>Introducción</h2>
+    <h3 class="preguntas">¿Qué es CSS?</h3>
+    <p>CSS (Cascading Style Sheets) es un lenguaje el cual nos permite agregar diseño a nuestra pagina</p>
+    <h3 class="preguntas">Propósito de CSS</h3>
+    <p>El propósito de CSS ees mejorar la </p>
+    <h3 class="preguntas">Cómo aplicar CSS a HTML (3 opciones)</h3>
+    <ul>
+        <li>CSS en línea: Se aplica directamente a los elementos HTML mediante el atributo <code>style</code>.</li>
+        <li>CSS interno: Se coloca dentro de la etiqueta <code>style</code> en el <code>head</code> del documento HTML.
+        </li>
+        <li>CSS externo: Se coloca en un archivo CSS separado y se enlaza al documento HTML mediante la etiqueta
+            <code>link</code>.</li>
+    </ul>
+    <h3 class="preguntas">¿Qué es un selector? ¿Qué es una regla CSS?</h3>
+    <p>Un selector es una cadena que indica a qué elementos HTML se aplica una regla CSS. Una regla CSS consta de un
+        selector y un bloque de declaraciones que definen los estilos a aplicar.</p>
+    <p>Juega a los 32 niveles de <a href="https://flukeout.github.io/">CSS Diner</a></p>
+    <p>Juega a los 24 niveles de <a href="https://flexboxfroggy.com/">Flexbox Froggy</a></p>
+
+    <h2>CSS Básico</h2>
+    <h3>Explicación de:</h3>
+    <ul>
+        <li>Selector de etiqueta</li>
+        <li>Selector de clase</li>
+        <li>Selector de etiqueta y clase</li>
+        <li>Selector de ID</li>
+    </ul>
+    <h3 class="preguntas">¿Qué es una clase? ¿Qué es un ID? ¿Cómo se relacionan con CSS?</h3>
+    <p>Una clase es un atributo que se puede asignar a uno o más elementos HTML para aplicarles estilos específicos
+        mediante CSS. Un ID es un atributo único que se asigna a un solo elemento HTML. Estos se relacionan ya que con ambos podemos aplicarle estilo a un elemento ne especifico de nuestra pagina.</p>
+    <h3 class="preguntas">Explicación del modelo de caja CSS y ejemplo</h3>
+    <p>El modelo de caja CSS describe cómo se dispone el contenido en una página web. Cada elemento se representa como
+        un cuadro rectangular que tiene márgenes, bordes, relleno y contenido.</p>
+    <h3 class="preguntas">Cambiar el color de la fuente usando CSS</h3>
+    <p>Para cambiar el color de la fuente usando CSS, se utiliza la propiedad>color.</p>
+    p {color: blue;}
+</body>
+
+</html>

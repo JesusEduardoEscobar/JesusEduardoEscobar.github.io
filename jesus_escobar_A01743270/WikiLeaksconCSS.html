@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiLeaks</title>
+    <style>
+            body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    header img {
+        height: 40px;
+        vertical-align: middle;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        background-color: #444;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+    }
+
+    nav button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    nav button:hover {
+        background-color: #0056b3;
+    }
+
+    .search-bar {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .search-bar input[type="text"] {
+        padding: 10px;
+        width: 80%;
+        max-width: 400px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .categories {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .categories li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    .categories li a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    /* --------------------- */
+    /* ✅ Mejoras en .featured */
+    /* --------------------- */
+    .featured {
+        text-align: center;
+        margin: 30px 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Espacio entre elementos */
+    }
+
+    .featured h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .featured-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .featured img {
+        max-width: 90%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .featured p {
+        font-size: 14px;
+        color: #666;
+        max-width: 80%;
+        text-align: center;
+    }
+
+    /* --------------------- */
+    /* 📱 Diseño Responsivo */
+    /* --------------------- */
+    @media (min-width: 768px) {
+        .featured {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .featured-images {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .featured img {
+            max-width: 45%;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Wikileaks_logo.svg/887px-Wikileaks_logo.svg.png"
+                alt="Logo de WikiLeaks" />
+            WikiLeaks
+        </h1>
+    </header>
+    <nav>
+        <a href="#">Leaks</a>
+        <a href="#">News</a>
+        <a href="#">About</a>
+        <a href="#">Partners</a>
+        <button type="submit">Donate</button>
+        <button type="submit">Submit</button>
+    </nav>
+    <div class="search-bar">
+        <form>
+            <input type="text" placeholder="Search Keywords">
+        </form>
+    </div>
+    <ul class="categories">
+        <li><a href="#">Intelligence</a></li>
+        <li><a href="#">Global Economy</a></li>
+        <li><a href="#">International Politics</a></li>
+        <li><a href="#">Corporations</a></li>
+        <li><a href="#">Government</a></li>
+        <li><a href="#">War & Military</a></li>
+    </ul>
+    <div class="featured">
+        <h1>Featured</h1>
+        <img src="./imagenActividad5/featured.png" alt="Imagen destacada">
+        <img src="https://imgs.search.brave.com/6Bgp-ZUlTT5p7WKuQw3THiQNjL5dHzBoE_7IejYuZWc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YmxvZ2RlbGZvdG9n/cmFmby5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjMvMTAv/aW1hZ2VuZXMtZ3Jh/Y2lvc2FzLndlYnA"
+            alt="Imagen adicional">
+        <p>Los niños están perdiendo la cabeza por usar demasiado el teléfono</p>
+    </div>
+</body>
+
+</html>
