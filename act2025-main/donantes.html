@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Donantes</title>
+</head>
+
+<body>
+    <h1>Lista de donantes</h1>
+    <div id="donantes-lista"></div>
+    <a href="/">Bienvenida</a>
+    <script>
+        async function obtenerEscuelas() {
+            //Agregar el url adecuado
+            const listaDonantes = await fetch("/api/donantes");
+            const jsonLD = await listaDonantes.json();
+            console.log(jsonLD);
+            // Muestra las escuelas en el html
+            const lista = document.createElement('ul')
+            jsonLD.donantes.forEach(donante => {
+                const item = document.createElement("li");
+                item.textContent = `${donante.nombre} dono: ${donante.cantidad}`;
+                lista.appendChild(item);
+            });
+            document.body.appendChild(lista)
+            // const content = document.getElementById("donantes-lista")
+            // content.innerHTML = "";
+            // const lista = document.createElement("ul");
+
+            // jsonLD.donantes.forEach(donante => {
+            //     const item = document.createElement("li");
+            //     item.textContent = `${donante.nombre} dono: ${donante.cantidad}`;
+            //     lista.appendChild(item);
+            // });
+
+            content.appendChild(lista);
+        }
+        obtenerEscuelas();
+
+        // Nombre del alumno:
+        /*
+        Jesus Eduardo Escobar Meza
+        */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Escuelas</title>
+</head>
+<body>
+    <h1>Lista de escuelas</h1>
+   
+    <a href="/">Bienvenida</a>
+
+    <script>
+        async function obtenerEscuelas() {
+        //Agregar el url adecuado
+          const listaEscuelas= await fetch("/api/escuelas");
+          const jsonLE=await listaEscuelas.json();
+          console.log(jsonLE);
+          //Muestra las escuelas en el html
+          const lista = document.createElement('ul')
+            jsonLE.escuelas.forEach(escuelas => {
+                const item = document.createElement("li");
+                item.textContent = `${escuelas.nombre} direccion: ${escuelas.direccion}`;
+                lista.appendChild(item);
+            });
+            document.body.appendChild(lista)
+        }
+        obtenerEscuelas();
+
+        // Nombre del alumno:
+        /*
+        Jesus Eduardo Escobar Meza
+        */
+    </script>
+</body>
+</html>
