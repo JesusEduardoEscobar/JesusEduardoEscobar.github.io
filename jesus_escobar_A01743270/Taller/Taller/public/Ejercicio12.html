@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuelas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        .escuela {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Información de Escuelas</h1>
+    <div id="escuela"></div>
+    <script>
+        const idEscuela = 1
+        const url = `http://localhost:3000/getEscuela/${idEscuela}`
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Escuela no encontrada');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const escuelaDiv = document.getElementById('escuela');
+                escuelaDiv.innerHTML = `
+        <div class="escuela">
+            <h2>${data.nombre}</h2>
+            <p><strong>Ubicación:</strong> ${data.ubicacion}</p>
+            <p><strong>Necesidades:</strong> ${data.necesidades.join(', ')}</p>
+            </div>`
+            })
+        .catch(error => {
+             document.getElementById('escuela').innerHTML = `<p style="color:red;">${error.message}</p>`;
+            });
+    </script>
+</body>
+
+</html>
