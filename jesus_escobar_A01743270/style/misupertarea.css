@@ -61,3 +61,10 @@ a:hover {
         width: 100%;
     }
 }
+
+.img {
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
